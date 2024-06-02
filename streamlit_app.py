@@ -17,15 +17,21 @@ st.sidebar.write('**당신의 선택**:', your_option)
 # ---------- 메인(Main) 화면 구성 --------------------
 st.title("스트림릿의 사이드바 사용 예")
 
-folder = './data'
+# folder = './data'
 
 # selectbox_options의 요소에 따라서 보여줄 이미지 파일 리스트(selectbox_options의 요소와 순서를 일치시킴)
-image_files = ['Vermeer.png', 'Gogh.png', 'Munch.png', 'ShinYoonbok.png'] # 이미지 파일 리스트
+# image_files = ['Vermeer.png', 'Gogh.png', 'Munch.png', 'ShinYoonbok.png'] # 이미지 파일 리스트
+image_files = [
+    'https://github.com/impelfin/streamlit/blob/main/data/Vermeer.png', 
+    'https://github.com/impelfin/streamlit/blob/main/data/Gogh.png', 
+    'https://github.com/impelfin/streamlit/blob/main/data/Munch.png', 
+    'https://github.com/impelfin/streamlit/blob/main/data/ShinYoonbok.png'
+    ] # 이미지 파일 리스트
 
 # 셀렉트박스에서 선택한 항목에 따라 이미지 표시
 selectbox_options_index = selectbox_options.index(your_option) # selectbox_options의 리스트 인덱스 찾기
 image_file = image_files[selectbox_options_index] # 선택한 항목에 맞는 이미지 파일 지정
-image_urls = folder + image_file 
+image_urls = image_file 
 # st.image(image_urls, caption=your_option)        # 이미지 표시
 st.image(image_urls, caption=image_urls)        # 이미지 표시
 
