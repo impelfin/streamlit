@@ -34,4 +34,4 @@ image_file = image_files[selectbox_options_index] # 선택한 항목에 맞는 �
 image_url = image_file 
 # st.image(image_url, caption=your_option)        # 이미지 표시
 # st.image(image_url, caption=image_url)        # 이미지 표시
-st.image('https://github.com/impelfin/streamlit/blob/main/data/Vermeer.png')
+st.image('https://github.com/impelfin/project/data/Vermeer.png')
